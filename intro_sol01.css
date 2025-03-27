@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(28, 24, 25);
+    display: flex;
+    flex-direction: column; /* Placerer elementerne i en lodret retning */
+    align-items: left; /* Centrerer horisontalt */
+    height: 80vh; /* Fylder hele skærmhøjden */
+    margin-left: 100px;
+    margin-right: 500px;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 70px;
+}
+
+.tekst img {
+    width: 700px;  /* Juster bredden */
+    height: auto;  /* Bevarer proportionerne */
+    
+    position: absolute;  /* Gør det muligt at placere det præcist */
+    top: 150px;  /* Afstand fra toppen */
+    left: 100px; /* Afstand fra venstre */
+}
+
+.solen img {
+    width: 400px;  /* Juster bredden */
+    height: auto;  /* Bevarer proportionerne */
+    
+    position: absolute;  /* Gør det muligt at placere det præcist */
+    top: 180px;  /* Afstand fra toppen */
+    left: 900px; /* Afstand fra venstre */
+}
+
+.button_image {
+    position: absolute;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    top: 700px; /* Juster for at rykke den ned */
+    left: 1200px; /* Juster for at rykke den mod højre */
+}
+
+#arrow-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#arrow-button img {
+    width: 50px; /* Juster størrelse efter behov */
+    height: auto;
+}
+
