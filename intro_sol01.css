@@ -15,7 +15,7 @@ h1 {
 }
 
 .tekst img {
-    width: 700px;  /* Juster bredden */
+    width: 600px;  /* Juster bredden */
     height: auto;  /* Bevarer proportionerne */
     
     position: absolute;  /* Gør det muligt at placere det præcist */
