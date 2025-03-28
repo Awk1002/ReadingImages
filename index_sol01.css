@@ -30,7 +30,7 @@ body {
 }
 
 #knap1 {
-    rotate:5deg;
+    rotate:8deg;
 }
 
 .button_image {
@@ -47,8 +47,20 @@ body {
 }
 
 #arrow-button img {
-    width: 50px; /* Juster størrelse efter behov */
+    width: 60px; /* Juster størrelse efter behov */
     height: auto;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+#arrow-button:hover img {
+    animation: wiggle 0.3s ease-in-out infinite;
 }
 
 .image-wrapper {
@@ -85,4 +97,34 @@ p {
     font-size: 14px;
     text-align: center;
     width: 100%;
+}
+
+.button_image2 {
+    position: absolute;
+    top: 25px;
+    right: 40px; /* Juster for at rykke den mod højre */
+}
+
+#arrow-button2 {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#arrow-button2 img {
+    width: 100px; /* Juster størrelse efter behov */
+    height: auto;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+#arrow-button2:hover img {
+    animation: wiggle 0.3s ease-in-out infinite;
 }
