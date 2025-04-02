@@ -1,43 +1,42 @@
 body {
     background-color: rgb(28, 24, 25);
     display: flex;
-    flex-direction: column; /* Placerer elementerne i en lodret retning */
-    align-items: left; /* Centrerer horisontalt */
-    height: 80vh; /* Fylder hele skærmhøjden */
-    margin-left: 100px;
-    margin-right: 500px;
+    justify-content: center; /* Centrerer horisontalt */
+    height: 100vh; /* Fylder hele skærmhøjden */
+    margin: 0;
 }
 
-h1 {
-  color: rgb(255, 255, 255);
-  font-family: 'Times New Roman', Times, serif;
-  margin-top: 60px;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.tekst img {
-    width: 600px;  /* Juster bredden */
-    height: auto;  /* Bevarer proportionerne */
-    
-    position: absolute;  /* Gør det muligt at placere det præcist */
-    top: 150px;  /* Afstand fra toppen */
-    left: 100px; /* Afstand fra venstre */
+.buttons {
+    border: none;
+    margin-top: 80px; /* Juster for at flytte knapperne tættere på billederne */
+    display: flex;
+    justify-content: center; /* Sørger for at de forbliver centrerede */
+    gap: 50px; /* Reducerer afstanden mellem knapperne */
 }
 
-#sol02 {
-    width: 300px;  /* Juster bredden */
-    height: auto;  /* Bevarer proportionerne */
-    
-    position: absolute;  /* Gør det muligt at placere det præcist */
-    top: 200px;  /* Afstand fra toppen */
-    left: 850px; /* Afstand fra venstre */  
+.buttons button {
+    position: relative;
+    margin-top: 20px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#knap1 {
+    rotate:8deg;
 }
 
 .button_image {
     position: absolute;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    bottom: 80px;
-    left: 1200px; /* Juster for at rykke den mod højre */
+    top: 30px; /* Juster for at rykke den ned */
+    left: 20px; /* Juster for at rykke den mod højre */
 }
 
 #arrow-button {
@@ -64,3 +63,68 @@ h1 {
     animation: wiggle 0.3s ease-in-out infinite;
 }
 
+.image-wrapper {
+    display: flex; /* Gør det muligt at placere elementer side om side */
+    justify-content: center; /* Centrerer billederne vandret */
+    align-items: center; /* Centrerer dem lodret */
+    margin-top: 0px; /* Justér denne værdi for at flytte billederne ned */
+    width: 395px;  /* Justér efter behov */
+    height: 395px;
+    border-radius: 50%; /* Gør den cirkelformet */
+    overflow: hidden; /* Skjuler alt uden for cirklen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #ffffff; /* Baggrundsfarve */
+}
+
+.image-container {
+    position: relative;
+    width: 400px; /* Sæt en fast bredde, så containerne ikke flytter sig */
+    height: 400px; /* Sæt en fast højde */
+    overflow: hidden; /* Sørger for, at billeder ikke stikker ud */
+}
+
+p {
+    position: absolute;
+    bottom: 15px;  /* Juster afstanden fra bunden */
+    left: 50%;
+    transform: translateX(-50%); /* Centrerer teksten */
+    color: rgb(255, 255, 255); 
+    opacity: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+.button_image2 {
+    position: absolute;
+    top: 25px;
+    right: 40px; /* Juster for at rykke den mod højre */
+}
+
+#arrow-button2 {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#arrow-button2 img {
+    width: 100px; /* Juster størrelse efter behov */
+    height: auto;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+#arrow-button2:hover img {
+    animation: wiggle 0.3s ease-in-out infinite;
+}
