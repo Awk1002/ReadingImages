@@ -33,6 +33,32 @@ h1 {
     transform: scale(1.1); /* Gør billedet lidt større ved hover */
 }
 
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 50%;  /* Juster placeringen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(28, 24, 25);
+    color: white;
+    padding: 5px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    white-space: normal;
+    z-index: 10;
+}
+
+.image-container:hover .tooltip {
+    opacity: 1; 
+}
+
 .button_image {
     position: absolute;
     top: 30px; /* Juster for at rykke den ned */
